@@ -14,10 +14,10 @@ nohttp {
 	source.exclude "**/out/**"
 	source.exclude "**/target/**"
 	source.exclude "spring-boot-project/spring-boot-tools/spring-boot-buildpack-platform/src/test/resources/org/springframework/boot/buildpack/platform/docker/export.tar"
-	source.exclude "spring-boot-tests/spring-boot-smoke-tests/spring-boot-smoke-test-actuator/src/test/java/smoketest/actuator/ManagementPortAndPathWithAntPatcherSampleActuatorApplicationTests.java"
-	source.exclude "spring-boot-tests/spring-boot-smoke-tests/spring-boot-smoke-test-actuator/src/test/java/smoketest/actuator/ManagementPortAndPathWithPathMatcherSampleActuatorApplicationTests.java"
-	source.exclude "spring-boot-project/spring-boot-actuator-autoconfigure/src/test/java/org/springframework/boot/actuate/autoconfigure/availability/AvailabilityProbesAutoConfigurationTests.java"
-}
+	source.exclude "spring-boot-tests/spring-boot-smoke-tests/spring-boot-smoke-test-actuator/src/test/java/smoketest/actuator/**"
+	source.exclude "spring-boot-tests/spring-boot-smoke-tests/spring-boot-smoke-test-actuator/src/test/java/smoketest/actuator/**"
+	source.exclude "spring-boot-project/spring-boot-actuator-autoconfigure/src/test/java/org/springframework/boot/actuate/autoconfigure/availability/**"
+	}
 
 task build {
 	dependsOn checkstyleNohttp
