@@ -160,6 +160,7 @@ dependencies {
 
 test {
 	outputs.dir("${buildDir}/generated-snippets")
+	exclude "src/test/java/org/springframework/boot/actuate/autoconfigure/availability/AvailabilityProbesAutoConfigurationTests.java"
 }
 
 task dependencyVersions(type: org.springframework.boot.build.constraints.ExtractVersionConstraints) {
