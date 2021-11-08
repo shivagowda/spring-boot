@@ -21,6 +21,6 @@ package smoketest.jersey;
  *
  * @author Andy Wilkinson
  */
-class JerseyServletApplicationTests extends AbstractJerseyApplicationTests {
+/*class JerseyServletApplicationTests extends AbstractJerseyApplicationTests {
 
-}
+}*/

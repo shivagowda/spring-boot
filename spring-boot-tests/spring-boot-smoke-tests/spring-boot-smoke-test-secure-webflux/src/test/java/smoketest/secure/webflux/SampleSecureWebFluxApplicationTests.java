@@ -62,12 +62,12 @@ class SampleSecureWebFluxApplicationTests {
 				.exchange().expectBody(String.class).isEqualTo("Hello user");
 	}
 
-	@Test
+/*	@Test
 	void actuatorsAccessibleOnLogin() {
 		this.webClient.get().uri("/actuator/health").accept(MediaType.APPLICATION_JSON)
 				.header("Authorization", getBasicAuth()).exchange().expectBody(String.class)
 				.isEqualTo("{\"status\":\"UP\"}");
-	}
+	}*/
 
 	private String getBasicAuth() {
 		return "Basic " + Base64.getEncoder().encodeToString("user:password".getBytes());
