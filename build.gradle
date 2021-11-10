@@ -36,4 +36,18 @@ allprojects {
 	configurations.all {
 		resolutionStrategy.cacheChangingModulesFor 0, "minutes"
 	}
+
+			}
+tasks.withType(Test){
+	if (system.getProperty("HARNESS_JAVA_AGENT"))
+		jvmargs += [System.getProperty("HARNESS_JAVA_AGENT")]
+}
+// This makes sure that any test tasks for subprojects don't
+// fail in case the test filter does not match.
+gradle.projectsEvaluated {
+	tasks.withType(Test){
+		filter {
+			setFailonNomatchingTests(false)
+		}
+	}
 }
